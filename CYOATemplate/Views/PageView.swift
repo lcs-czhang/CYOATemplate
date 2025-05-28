@@ -28,7 +28,7 @@ struct PageView: View {
             VStack(spacing: 10) {
                 
                 // Has the page loaded yet?
-                if let page = viewModel.page {
+                if var page = viewModel.page {
                     
                     // DEBUG
                     let _ = print("Text for this page is:\n\n\(page.narrative)\n\n")
@@ -44,35 +44,26 @@ struct PageView: View {
                     )
                     .font(.title2)
                     
-                    if let image = page.image {
-                        
-                        Image(image)
-                            .resizable()
-                            .scaledToFit()
-                            .border(.black, width: 1)
-                            .padding(.vertical, 10)
-                        
-                    }
-                    
                     Divider()
                     
                     if page.isAnEndingOfTheStory {
-                        
-                        // Page is an ending, so tell the user,
-                        // and allow book to be re-started
                         Text("The End")
                             .bold()
                             .onTapGesture {
                                 book.showCoverPage()
                             }
-                        
+                            .task {
+                                book.numberOfEndingRead += 1
+                                print("Number of Endings Read = \(book.numberOfEndingRead)")
+                            }
                     } else {
-                        
-                        // Page is not an ending, so show available edges
                         EdgesView(
-                            viewModel: EdgesViewModel(book: book), pageViewModel: PageViewModel(book: book)
+                            viewModel: EdgesViewModel(book: book),
+                            pageViewModel: PageViewModel(book: book)
                         )
-                        
+                        .task {
+                            book.numberOfPageRead += 1
+                        }
                     }
                     
                     

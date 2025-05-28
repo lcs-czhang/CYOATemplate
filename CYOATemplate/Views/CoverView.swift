@@ -23,24 +23,30 @@ struct CoverView: View {
                 ProgressView()
                 
             } else {
-                
-                // Show the cover
-                Text("The Cocoon")
-                    .font(.largeTitle)
-                
-                Button {
-                    // Animate page changes (fade)
-                    withAnimation {
-                        book.beginReading()
+                ZStack{
+                    Image("cocoon")
+                    VStack{
+                        // Show the cover
+                        Text("The Cocoon")
+                            .font(.largeTitle)
+                            .background(Color.white)
+                        
+                        Button {
+                            // Animate page changes (fade)
+                            withAnimation {
+                                book.beginReading()
+                            }
+                        } label: {
+                            Text("Begin reading")
+                        }
+                        .buttonStyle(.borderedProminent)
                     }
-                } label: {
-                    Text("Begin reading")
                 }
-                .buttonStyle(.borderedProminent)
+                
             }
             
         }
-        .padding()
+        .ignoresSafeArea()
         
     }
 }

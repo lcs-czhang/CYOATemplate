@@ -183,20 +183,6 @@ class BookStore: Observable {
         }
         
     }
-    func getPagesRead() async throws -> TotalPagesRead {
-        
-        do {
-            let totalPagesRead: TotalPagesRead = try await supabase
-                .from("total_pages_read")
-                .select()
-                .eq("readerId", value: self.reader.id!)
-                .single()
-                .execute()
-                .value
-            
-            return totalPagesRead
-        }
-    }
     
     // Save the reader's state for this book
     func saveState() async throws {
@@ -244,5 +230,7 @@ class BookStore: Observable {
         }
         
     }
+    var numberOfPageRead: Int = 0
+    var numberOfEndingRead: Int = 0
     
 }

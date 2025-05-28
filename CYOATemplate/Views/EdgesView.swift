@@ -61,13 +61,15 @@ struct EdgesView: View {
                                 .multilineTextAlignment(.trailing)
                         }
                         .onTapGesture {
-                            if (pageViewModel.page?.ifRead != false){
-                                pageViewModel.page?.ifRead.toggle()
-                                if (pageViewModel.page!.isAnEndingOfTheStory) {
-                                    pageViewModel.addEnding()
-                                }
-                                pageViewModel.addPage()
-                            }
+                            totalPagesRead.numberOfPageRead += 1
+                            print("\(totalPagesRead.numberOfPageRead)")
+//                            if (pageViewModel.page?.ifRead != false){
+//                                pageViewModel.page?.ifRead.toggle()
+//                                if (pageViewModel.page!.isAnEndingOfTheStory) {
+//                                    
+//                                }
+//                                pageViewModel.addPage()
+//                            }
                             // DEBUG
                             print("Current page number is: \(book.currentPageId!)")
                             print("==== about to change page ====")
