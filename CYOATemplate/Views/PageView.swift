@@ -44,16 +44,6 @@ struct PageView: View {
                     )
                     .font(.title2)
                     
-                    if let image = page.image {
-                        
-                        Image(image)
-                            .resizable()
-                            .scaledToFit()
-                            .border(.black, width: 1)
-                            .padding(.vertical, 10)
-                        
-                    }
-                    
                     Divider()
                     
                     if page.isAnEndingOfTheStory {
