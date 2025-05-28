@@ -36,3 +36,11 @@ struct Page: Identifiable, Codable {
     }
     
 }
+struct TotalPagesRead {
+    
+    // MARK: Stored properties
+    var numberOfPageRead: Int
+    var numberOfEndingRead: Int
+    
+}
+var totalPagesRead = TotalPagesRead(numberOfPageRead: 0, numberOfEndingRead: 0)

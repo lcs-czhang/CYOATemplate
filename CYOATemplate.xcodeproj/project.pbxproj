@@ -47,8 +47,6 @@
 		81C198BF2A251B4D0047A4B3 /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C198BE2A251B4D0047A4B3 /* Ending.swift */; };
 		81C784AB2A28AD0B001BC867 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C784AA2A28AD0B001BC867 /* PageView.swift */; };
 		81C784AF2A28B4E7001BC867 /* EdgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C784AE2A28B4E7001BC867 /* EdgesView.swift */; };
-		E11850D82DE68542000D2854 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11850D72DE68542000D2854 /* GlobalVariables.swift */; };
-		E11850D92DE68542000D2854 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11850D72DE68542000D2854 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,7 +88,6 @@
 		81C198BE2A251B4D0047A4B3 /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
 		81C784AA2A28AD0B001BC867 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		81C784AE2A28B4E7001BC867 /* EdgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgesView.swift; sourceTree = "<group>"; };
-		E11850D72DE68542000D2854 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +227,6 @@
 				81C198BC2A251B2B0047A4B3 /* Edge.swift */,
 				81C198BE2A251B4D0047A4B3 /* Ending.swift */,
 				812F513C2C0D0FB500C1A270 /* Reader.swift */,
-				E11850D72DE68542000D2854 /* GlobalVariables.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -372,7 +368,6 @@
 			files = (
 				812F51552C0DF4DA00C1A270 /* Page.swift in Sources */,
 				812F51562C0DF4DA00C1A270 /* Edge.swift in Sources */,
-				E11850D92DE68542000D2854 /* GlobalVariables.swift in Sources */,
 				812F51572C0DF4DA00C1A270 /* Ending.swift in Sources */,
 				812F51582C0DF4DA00C1A270 /* Reader.swift in Sources */,
 				8123CD2B2A34F9C100F9DF1C /* SharedFunctions.swift in Sources */,
@@ -399,7 +394,6 @@
 				81C784AF2A28B4E7001BC867 /* EdgesView.swift in Sources */,
 				81C784AB2A28AD0B001BC867 /* PageView.swift in Sources */,
 				812F51392C0D01A300C1A270 /* StatsView.swift in Sources */,
-				E11850D82DE68542000D2854 /* GlobalVariables.swift in Sources */,
 				81C198BF2A251B4D0047A4B3 /* Ending.swift in Sources */,
 				812F513D2C0D0FB500C1A270 /* Reader.swift in Sources */,
 				812F512C2C0CD85500C1A270 /* AuthView.swift in Sources */,
